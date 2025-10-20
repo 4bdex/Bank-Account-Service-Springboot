@@ -1,0 +1,30 @@
+### Create account
+POST http://localhost:8080/accounts
+Content-Type: application/json
+
+{
+	"accountId": "acc-1",
+	"balance": 1500.0,
+	"currency": "MAD",
+	"type": "CURRENT_ACCOUNT"
+}
+
+### Get account by id
+GET http://localhost:8080/accounts/acc-1
+
+
+### List all accounts
+GET http://localhost:8080/accounts
+Accept: application/json
+
+### Update account
+PUT http://localhost:8080/accounts/acc-1
+Content-Type: application/json
+
+{
+	"balance": 2000.0
+}
+
+
+### Delete account
+DELETE http://localhost:8080/accounts/acc-1
