@@ -28,7 +28,7 @@ public class BankAccountServiceApplication {
 						.accountId(UUID.randomUUID().toString())
 						.currency("MAD")
 						.balance(Math.random() * 80000)
-						.createAt(new Date())
+						.createAt(System.currentTimeMillis())
 						.type(Math.random() > 0.5 ? AccountType.CURRENT_ACCOUNT : AccountType.SAVING_ACCOUNT)
 						.build();
 

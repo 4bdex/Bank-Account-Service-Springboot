@@ -26,7 +26,7 @@ public class AccountServiceImp implements AccountService {
     public BankAccountResponseDTO addAccount(BankAccountRequestDTO bankAccountRequestDTO) {
         BankAccount bankAccount = accountMapper.toBankAccount(bankAccountRequestDTO);
         bankAccount.setAccountId(UUID.randomUUID().toString());
-        bankAccount.setCreateAt(new Date());
+        bankAccount.setCreateAt(System.currentTimeMillis());
     
         BankAccount savedAccount = bankAccountRepository.save(bankAccount);
         return accountMapper.fromBankAccount(savedAccount);
